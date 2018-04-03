@@ -1,0 +1,10 @@
+h1, p {
+    text-align: center; 
+}
+
+#map {
+    width: 90%;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: 5%;
+}
