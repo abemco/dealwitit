@@ -1,4 +1,5 @@
 
+
 // Google Maps API to display on the page
 var map;
 var infoWindow;
@@ -6,6 +7,7 @@ var infoWindow;
 var request;
 var service;
 var markers = [];
+
 
     function initialize() {
     var center = new google.maps.LatLng(28.443237, -81.469780);
@@ -18,11 +20,13 @@ var markers = [];
     request = {
         location: center,
         radius: 8047,
+
         types: ['restaurant']
     };
     infowindow = new google.maps.InfoWindow();
 
     // Create a service to search for Orlando Restaurant
+
     var service = new google.maps.places.PlacesService(map);
 
     service.nearbySearch(request, callback);
@@ -36,7 +40,10 @@ var markers = [];
         var request = {
             location: event.latLng,
             radius: 8047,
+
             types: ['restaurant']
+
+         
         };
         service.nearbySearch(request, callback);
     })
