@@ -21,3 +21,57 @@ var markers = [];
         types: ['car_rental']
     };
     infowindow = new google.maps.InfoWindow();
+
+    // Create a service to search for Orlando Car Rentals
+    var service = new google.maps.places.PlacesService(map);
+
+    service.nearbySearch(request, callback);
+
+    // Create event listener to be search from any location
+    google.maps.event.addListener(map, 'rightclick', function(event){
+        map.setCenter(event.latLng)
+        clearResults(markers)
+
+        // Calls nearby search
+        var request = {
+            location: event.latLng,
+            radius: 8047,
+            types: ['car_rental']
+        };
+        service.nearbySearch(request, callback);
+    })
+}
+
+// Call back function to make sure get right results
+function callback(results, status) {
+    if(status == google.maps.places.PlacesServiceStatus.OK){
+        for (var i = 0; i < results.length; i++){
+            markers.push(createMarker(results[i]));
+        }
+    }
+}
+
+// Function to create marker of the results
+function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(place.name);
+        infowindow.open(map, this);
+    });
+    return marker;
+}
+
+// Function to clear off the markers on the map 
+function clearResults(markers) {
+    for (var m in markers) {
+        markers[m].setMap(null)
+    }
+    markers = []
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
