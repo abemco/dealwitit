@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <title>Attractions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--materalize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     
     <!-- Firebase JavaScript Link -->
@@ -23,9 +30,34 @@
     <div id="map">
     </div>
 
+
+     <!--start Button-->
+     <button data-target="modal1" id="startButton" class="waves-effect waves-light btn modal-trigger">
+        <strong>Start</strong>
+      </button>
+  <br>
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Start</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+    
+
+
     <iframe src="https://discountapi.com/e/a1debe79-f229-461e-9579-c8e73044c87d" width="150" height="200" style="border:0;padding:0;margin:0;"></iframe>
     
      <!--JavaScript at end of body for optimized loading-->
      <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+     
 </body>
 </html>
