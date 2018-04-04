@@ -17,17 +17,27 @@
     <!-- Firebase JavaScript Link -->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
+    <!-- Zomato API -->
+    <script type="text/javascript" src="https://developers.zomato.com/api/v2.1/search?entity_id=601&entity_type=city&count=30&sort=rating&order=asc&apikey=7c7844a8b5c9183b9520d3d76a131149"></script>
+
     <!-- Google Maps API -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBeuOas6kzMblCt-mOpow7nYQHk2Rq8Gmg"></script>
     
-    <!-- Discount API -->
-    <script type="text/javascript" src=https://api.discountapi.com/v2/deals?api_key=xnucSrto></script>
+    
+    
 
 </head>
 <body>
     <h1>Dealwitit Restaurant Finder</h1>
     <p>Location Service Based Restaurants</p>
-
+    <div class="topnav">
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Find a restaurant" name="search">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     <div id="map">
     </div>
 
@@ -41,7 +51,7 @@
     
 
 
-    <iframe src="https://discountapi.com/e/a1debe79-f229-461e-9579-c8e73044c87d" width="150" height="200" style="border:0;padding:0;margin:0;"></iframe>
+    
     
     
      <!--JavaScript at end of body for optimized loading-->

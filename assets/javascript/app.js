@@ -1,6 +1,10 @@
 /*
 logic for Dealwitit
 */
+
+
+
+
 // Google Maps API to display on the page
 var map;
 var infoWindow;
@@ -18,7 +22,7 @@ var markers = [];
     request = {
         location: center,
         radius: 8047,
-        types: ['car_rental']
+        types: ['restaurant']
     };
     infowindow = new google.maps.InfoWindow();
 
@@ -36,7 +40,7 @@ var markers = [];
         var request = {
             location: event.latLng,
             radius: 8047,
-            types: ['car_rental']
+            types: ['restaurant']
         };
         service.nearbySearch(request, callback);
     })
@@ -75,3 +79,5 @@ function clearResults(markers) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
