@@ -26,6 +26,10 @@ h1, h4, p {
 margin-left: 57px;
 }
 
+i {
+    color: white;
+}
+
 header {
     background:url('../images/food.jpeg');
     background-position: bottom;
@@ -34,6 +38,13 @@ header {
     height: 300px;
 }
 
+
+
+
+header, container {
+    width: 98%;
+    margin-left: 1%;
+}
 
 
 #map {
