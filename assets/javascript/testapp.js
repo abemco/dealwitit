@@ -9,15 +9,18 @@
     .then(function(response) {
         // Storing an array of results in the results variable
         console.log(response)
-        var results = response.data;
-         // Looping through each result item
-         for (var i = 0; i < results.length; i++) {
-
+        //var results = response.data;
+        //response.restaurants[0].restaurant.name
+        // Looping through each result item
+        for (var i = 0; i < response.restaurants.length; i++) {
+            var restaurants= response.restaurants[i].restaurant.name
+            console.log(restaurants);
+            
             // storing a div tag
             var restaurantDiv = $("#restaurants");
 
             // Creating a paragraph tag with the results
-            var p = $("<p>").text(results[i]);
+            //var p = $("<p>").text(results[i]);
 
             
 
