@@ -20,6 +20,7 @@
 
     <!-- Firebase JavaScript Link -->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+   
 
     <!-- Google Maps API -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBeuOas6kzMblCt-mOpow7nYQHk2Rq8Gmg"></script>
@@ -51,15 +52,6 @@
 
     <header>
 
-        <br>
-        <div class="intro">
-            <h4>A Location-Based Restaurant Finder</h4>
-        </div>
-
-    
-
-
-
 <!-- Modal Structure -->
 <div id="modal" class="modal">
         <div class="modal-content">
@@ -68,12 +60,50 @@
          </div>
         <br>
         <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" >Continue to Site</a>
+          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-large" >Continue to Site</a>
         </div>
     </div>
     </header>
 
     <div id="map"></div>
+<br>
+<!--newsletter form for firebase-->
+<div class="row">
+        <form id="newsletter" class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="First Name" id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Last Name" id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="email@youremailprovider.com" id="email" type="email" class="validate">
+              <label for="email">Email</label>
+              <br>
+              <a id="submitButton" class="waves-effect waves-light btn">Submit</a>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+
+    <!--footer-->
+
+    <footer id="footer" class="page-footer">
+            <div class="footer-copyright">
+              <div class="container">
+              © 2018 Copyright Dealwitit
+              </div>
+            </div>
+          </footer>
+
+
+
 
 
 <!--jquery-->
@@ -86,6 +116,7 @@
   <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
     <script type="text/javascript" src="assets/javascript/testapp.js"></script>
+    <script type="text/javascript" src="assets/javascript/fireBase.js"></script>
 
     <script type="text/javascript">
 
