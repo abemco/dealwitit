@@ -75,3 +75,5 @@ function clearResults(markers) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
