@@ -1,10 +1,6 @@
 /*
 logic for Dealwitit
 */
-
-
-
-
 // Google Maps API to display on the page
 var map;
 var infoWindow;
