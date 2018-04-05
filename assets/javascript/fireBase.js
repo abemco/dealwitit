@@ -9,13 +9,14 @@ var config = {
     storageBucket: "dealwitit-d1cc8.appspot.com",
     messagingSenderId: "521773465860"
   };
+
   firebase.initializeApp(config);
 
   var foodData = firebase.database();
 
   // 2. Populate Firebase Database with initial data (in this case, I did this via Firebase GUI)
 
-// 3. Button for adding trains
+// 3. Button for adding data
 $("#submitButton").on("click", function(){
 
 	// Grabs user input
@@ -25,17 +26,16 @@ $("#submitButton").on("click", function(){
     
   
     
-// Creates local "temporary" object for holding train data
+// Creates local "temporary" object for holding data
 var newContact = {
     firstName:  firstName,
-    lastName: lName,
+    lastName: lastName,
     email: email,
 }
 
-// Uploads train data to the database
+// Uploads data to the database
 foodData.ref().push(newContact);
 
-//
 
 // Clears all of the text-boxes
 $("#first_name").val("");
@@ -43,6 +43,5 @@ $("#last_name").val("");
 $("#email").val("");
 
 
-// Determine when the next train arrives.
 return false;
 });
