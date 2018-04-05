@@ -4,20 +4,25 @@
 }
 
 body{
-    
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    
 }
 
 h4{
 margin-left: 200px;
 }
 
+h6 {
+    text-align: center;
+    font-size: 18px;
+}
+
+#row {
+    position: center;
+}
+
 .modal{
 width: 45%;
 }
-
-
 
 #title{
 margin-left: 57px;
@@ -31,8 +36,6 @@ header {
     height: 300px;
 }
 
-
-
 #map {
     width: 80%;
     height: 300px;
@@ -42,8 +45,7 @@ header {
     border-style: solid;
 }
 
-
-#newsletter{
+#newsletter {
 width: 35%;
 margin-left: 375px;
 }
