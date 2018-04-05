@@ -1,4 +1,4 @@
-    $("button").on("click", function() {
+    $("#recommendationbtn").on("click", function() {
     // In this case, the "this" keyword refers to the button that was clicked
     
 
