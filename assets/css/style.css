@@ -9,25 +9,18 @@ body{
     
 }
 
-h1, h4, p {
-    width: 25%;
-    text-align: center;
-    float: left;
-    max-width: 600px;
-    padding: 10px;
-    padding-top: 10px;
-    margin-left: 25px;
-    background-color: white;
-    border-style: outset;
-    
-    
-}
-#title{
-margin-left: 57px;
+h4{
+margin-left: 200px;
 }
 
-i {
-    color: white;
+.modal{
+width: 45%;
+}
+
+
+
+#title{
+margin-left: 57px;
 }
 
 header {
@@ -38,13 +31,6 @@ header {
     height: 200px;
 }
 
-
-
-
-/* header, container {
-    width: 98%;
-    margin-left: 1%;
-} */
 
 
 #map {
@@ -62,7 +48,7 @@ width: 35%;
 margin-left: 375px;
 }
 
-/* footer{
+footer{
     text-align: center;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     width: 100%;
@@ -72,4 +58,4 @@ margin-left: 375px;
     padding-bottom: 50px;
    
     font-size: 12px;
-} */
+} 
