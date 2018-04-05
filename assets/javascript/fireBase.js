@@ -1,4 +1,4 @@
-/*firebase*/
+/*firebase for resturant finder*/
 
  /*Initialize Firebase*/
 var config = {
@@ -19,34 +19,28 @@ var config = {
 $("#submitButton").on("click", function(){
 
 	// Grabs user input
-	var firstName = $("first_name").val().trim();
-	var lName = $("#last_name").val().trim();
+	var firstName = $("#first_name").val().trim();
+	var lastName = $("#last_name").val().trim();
     var email = $("#email").val().trim(); 
     
-    // Uploads train data to the database
-    foodData.ref().push(newFood);
+  
     
 // Creates local "temporary" object for holding train data
-var newFood = {
-    name:  trainName,
-    destination: destination,
-    firstTrain: firstTrainUnix,
-    frequency: frequency
+var newContact = {
+    firstName:  firstName,
+    lastName: lName,
+    email: email,
 }
 
 // Uploads train data to the database
-foodData.ref().push(newFood);
+foodData.ref().push(newContact);
 
-// Logs everything to console
-console.log();
-console.log(); 
-console.log();
-console.log()
+//
 
 // Clears all of the text-boxes
-$("#first_nameInput").val("");
-$("#last_nameInput").val("");
-$("#emailInput").val("");
+$("#first_name").val("");
+$("#last_name").val("");
+$("#email").val("");
 
 
 // Determine when the next train arrives.

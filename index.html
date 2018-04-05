@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Restaurant Finder</title>
+    <title>Restaurant Finder |</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
@@ -12,16 +13,11 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
-   
-
-
-
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
     <!-- Firebase JavaScript Link -->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
    
-
     <!-- Google Maps API -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBeuOas6kzMblCt-mOpow7nYQHk2Rq8Gmg"></script>
 
@@ -31,9 +27,8 @@
 </head>
 
 
-<body>
-
-
+<body> 
+    <header>
         <nav>
                 <div class="nav-wrapper">
                   <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>DealWitIt</a>
@@ -45,27 +40,27 @@
                   </ul>
                 </div>
               </nav>
-
-
-    <header>
-
-<!-- Modal Structure -->
+</header>
+   
+<!-- Opening Modal Structure -->
 <div id="modal" class="modal">
-        <div class="modal-content">
-         <h3>Welcome to DealWitIt</h3>
-         <h5>This site offers coupons for resturants in your area.</h5>
-         </div>
-        <br>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-large" >Continue to Site</a>
+         <div class="modal-content">
+             <p><h3>Welcome to DealWitIt</h3> 
+                <h6>This site offers coupons for resturants in your area.</h6>
+        <a href="#!" id="modalButton"class="modal-action modal-close waves-effect btn-large">Continue to Site</a></p>
         </div>
     </div>
-    </header>
+
+  
+   
 
     <div id="map"></div>
 <br>
+
+
 <!--newsletter form for firebase-->
 <div class="row">
+        <h4>Want to recieve any newsletter? Feel free to sign up!</h4>
         <form id="newsletter" class="col s12">
           <div class="row">
             <div class="input-field col s6">
@@ -85,12 +80,12 @@
               <a id="submitButton" class="waves-effect waves-light btn">Submit</a>
             </div>
           </div>
-          
         </form>
       </div>
 
-    <!--footer-->
 
+
+    <!--footer-->
     <footer id="footer" class="page-footer">
             <div class="footer-copyright">
               <div class="container">
@@ -98,9 +93,6 @@
               </div>
             </div>
           </footer>
-
-
-
 
 
 <!--jquery-->
@@ -117,10 +109,12 @@
 
     <script type="text/javascript">
 
+    /*opening modal function*/
 $(document).ready(function(){
     $('#modal').modal();
     $('#modal').modal('open'); 
   });
+
     </script>
 
 
