@@ -1,4 +1,4 @@
-/*firebase for resturant finder*/
+/*firebase for restaurant finder*/
 
  /*Initialize Firebase*/
 var config = {
