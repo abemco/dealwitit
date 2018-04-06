@@ -16,8 +16,19 @@ h6 {
     font-size: 18px;
 }
 
+img {
+    border-radius: 50%;
+
+}
+
 #row {
     position: center;
+}
+
+#restaurants {
+    padding-left: 20px;
+    background:url("../images/restaurantbackground.jpg");
+    opacity: 0.87;
 }
 
 .modal{
@@ -49,6 +60,8 @@ header {
 width: 35%;
 margin-left: 375px;
 }
+
+
 
 footer{
     text-align: center;
