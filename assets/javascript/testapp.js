@@ -20,17 +20,17 @@
             var price = response.restaurants[i].restaurant.price_range;
             var menu = response.restaurants[i].restaurant.menu_url
             var url = response.restaurants[i].restaurant.url;
-            var urlImage = "/Users/CA/Desktop/dealwitit/assets/images/top-rated.jpg"
+            var urlImage = "assets/images/top-rated.jpg"
             var image = urlImage;
             var width = 150;
             var height = 150;
             var style = "display: block;";
             var right = "float: right;";
             // Creating a paragraph tag with the results
-            var p = $("<p>").text(restaurant);
+            var p = $("<h5>").text(restaurant);
             var a = $("<p>").text("Address: "+address);
             var r = $("<p>").text("Rating: "+rating);
-            var pr = $("<p>").text("Price Rate: "+price);
+            var pr = $("<p>").text("Price Range: "+price);
             var m = $("<a>").text("Menu").attr('href', menu).attr('target', '_blank');
             var url = $("<br><a></br>").text("More Info").attr('href', url).attr('target', '_blank');
             var img = $("<img>").attr('src',image).attr('width',width).attr('height',height).attr('style',style).attr('style',right);
