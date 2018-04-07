@@ -3,13 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Restaurant Finder |</title>
+    <title>DEALWITIT Restaurant Finder |</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
- 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
@@ -17,12 +14,15 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
-   </head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Assistant:800&font-effect-brick-sign" rel="stylesheet">  
+
+</head>
 
 <body> 
 <header>
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper black">
       <a href="#!" class="brand-logo">DEALWITIT<a>
         <ul class="right hide-on-med-and-down">
           <li><a href="https://twiter.com"><i class="fab fa-twitter"></i></a></li>
@@ -30,24 +30,37 @@
           <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
         </ul>
     </div>
-  </nav>
+  </nav> 
 </header>
    
 <!-- Opening Modal Structure -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <h3>Welcome to DealWitIt</h3>
-      <h5>This site offers coupons for resturants in your area.</h5>
-      <a href="#!" class="modal-action modal-close waves-effect btn-large" >Continue to Site</a>
+      <p>Our Map provides you with the closest 20 Restaurants in your area</p>
+      <p>If you need to search for a new area move the point on the map and right click to populate more restaurants.</p>
+      <p>Need Recomendation? We can provide that too</p>
+      <a href="#!" class="modal-action modal-close waves-effect btn-large">Continue to Site</a>
     </div>
   </div>
   
     <div id="map"></div>
     <br>
+    <br>
+
+    <div class="restShow">
+      <a id="recommendationbtn" class="waves-effect waves-light btn black">See Recommendations</a>
+    </div>
+    <div id="restaurants">
+    </div>
+
+    <br>
+  
 
 <!--newsletter form for firebase-->
 <div class="row">
     <h6>Subscribe to our Newsletter</h6>
+    <br>
         <form id="newsletter" class="col s12">
           <div class="row">
             <div class="input-field col s6">
@@ -64,51 +77,53 @@
               <input placeholder="email@youremailprovider.com" id="email" type="email" class="validate">
               <label for="email">Email</label>
               <br>
-              <a id="submitButton" class="waves-effect waves-light btn">Submit</a>
+              <br>
+              <a id="submitButton" class="waves-effect waves-light btn black">Submit</a>
               <br>
               <br>
-              <a id="recommendationbtn" class="waves-effect waves-light btn">See Recommendations</a>
+              
             </div>
           </div>
         </form>
       </div>
-      <div id="restaurants">
-      </div>
-
-
-    <!--footer
-    <footer id="footer" class="page-footer">
-            <div class="footer-copyright">
-              <div class="container">
-              © 2018 Copyright Dealwitit
-              </div>
-            </div>
-          </footer>-->
- 
-  
+      
+    <footer id="footer" class="page-footer black">
+      <div class="footer-copyright">
+          <div class="container">
+          © 2018 Copyright DEALWITIT
+          <a class="grey-text text-lighten-4 right" href="https://www.zomato.com/orlando">Powered by <p id="zomato">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspzomato</p></a>
+          </div>
+        </div>
+    </footer>
+           
   
   
     <!--Firebase-->
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-   <!-- Google Maps API -->
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBeuOas6kzMblCt-mOpow7nYQHk2Rq8Gmg"></script>
-   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-   <!--jquery-->
-   <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
-   <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <script type="text/javascript" src="assets/javascript/testapp.js"></script>
-    <script type="text/javascript" src="assets/javascript/fireBase.js"></script>    
-    <script type="text/javascript">
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    
+    <!-- Google Maps API -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBeuOas6kzMblCt-mOpow7nYQHk2Rq8Gmg"></script>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+    
+    <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="assets/javascript/app.js"></script>
+      <script type="text/javascript" src="assets/javascript/testapp.js"></script>
+      <script type="text/javascript" src="assets/javascript/fireBase.js"></script>    
+      <script type="text/javascript">
 
+    
     /*opening modal function*/
     $(document).ready(function(){
       $('#modal').modal();
       $('#modal').modal('open'); 
-  });
+    });
+    </script>
 
-</script>
 
 </body>
 
