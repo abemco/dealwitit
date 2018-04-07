@@ -21,26 +21,31 @@ h4{
 h6 {
     text-align: center;
     font-size: 18px;
+    margin-left: -50px;
 } 
 
 
 img {
-    border-radius: 50%;
-
+    border-radius: 60%;
+    margin-right: 60px;
+    margin-top: -150px;
 }
 
 #row, {
     position: center;
 }
 
+#newsletter {
+    position: center;
+}
+
 #recommendationbtn {
     position: center;
-    margin-left: 42%;
+    margin-left: 40%;
 }
 
 #submitButton {
     position: center;
-    margin-left: 44%;
 }
 
 #restaurants {
