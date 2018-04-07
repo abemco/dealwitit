@@ -45,9 +45,11 @@
   </div>
   
     <div id="map"></div>
+    
+    <p>Our Map provides you with the closest 20 Restaurants in your area</p>
+    <p>If you need to search for a new area move the point on the map and right click to populate more restaurants.</p>
+    <p>Need Recomendation? We can provide that too</p>
     <br>
-    <br>
-
     <div class="restShow">
       <a id="recommendationbtn" class="waves-effect waves-light btn black">See Recommendations</a>
     </div>
@@ -79,7 +81,7 @@
               <label for="email">Email</label>
               <br>
               <br>
-              <a id="submitButton" class="waves-effect waves-light btn black">Submit</a>
+              <a onclick="M.toast({html: 'Thanks For Subscribe', classes: 'rounded'})" id="submitButton" class="waves-effect waves-light btn black">Submit</a>
               <br>
               <br>
               

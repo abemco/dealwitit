@@ -24,6 +24,10 @@ h6 {
     margin-left: -50px;
 } 
 
+p {
+    text-align: center;
+    font-size: 14px;
+}
 
 img {
     border-radius: 60%;
