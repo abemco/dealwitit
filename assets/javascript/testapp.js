@@ -26,6 +26,7 @@
             var height = 150;
             var style = "display: block;";
             var right = "float: right;";
+            var idimage = "imagestyle";
             // Creating a paragraph tag with the results
             var p = $("<h5>").text(restaurant);
             var a = $("<p>").text("Address: "+address);
@@ -33,7 +34,7 @@
             var pr = $("<p>").text("Price Range: "+price);
             var m = $("<a>").text("Menu").attr('href', menu).attr('target', '_blank');
             var url = $("<br><a></br>").text("More Info").attr('href', url).attr('target', '_blank');
-            var img = $("<img>").attr('src',image).attr('width',width).attr('height',height).attr('style',style).attr('style',right);
+            var img = $("<img>").attr('src',image).attr('width',width).attr('height',height).attr('style',style).attr('style',right).attr('id', idimage);
             
             
 
